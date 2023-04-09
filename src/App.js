@@ -13,29 +13,11 @@ function App() {
       axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`)
         .then((response) => {
           setData(response.data)
-          setBackground(response.data.weather[0].description);
           console.log(response.data)
         })
         .catch((error) => {
           console.log(error);
         });
-    }
-  }
-
-  function setBackground(weather) {
-    const container = document.querySelector('.container');
-    if (weather === "Rain") {
-      container.style.backgroundImage = "weather-app\src\assets\rainy.jpg";
-    } else if (weather === "Snow") {
-      container.style.backgroundImage = "weather-app\src\assets\snowy.jpg";
-    } else if (weather === "Clear") {
-      container.style.backgroundImage = "weather-app\src\assets\sunset.jpg";
-    } else if (weather === "Clouds") {
-      container.style.backgroundImage = "weather-app\src\assets\cloudy.jpg";
-    } else if (weather === "Storm") {
-      container.style.backgroundImage = "weather-app\src\assets\stormy.jpg";
-    } else if (weather === "Wind") {
-      container.style.backgroundImage = "weather-app\src\assets\windy.jpg";
     }
   }
 
@@ -61,7 +43,6 @@ function App() {
           </div>
           <div className="description">
             <p>{data.weather[0].description}</p>
-            <img src={setBackground(data.weather[0].main)} alt="" />
           </div>
         </div>
         <div className="bottom-element">
