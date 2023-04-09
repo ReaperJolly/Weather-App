@@ -27,7 +27,7 @@ Also I used axios. Axios is a simple promise based HTTP client for the browser a
 
 ## Acknowledgments
 
-This app was made by help from article I found on FreeCode Camp (https://www.freecodecamp.org/news/learn-react-by-building-a-weather-app/) and by watching how-to videos on Youtube.
+This app was made by help from article I found on FreeCode Camp (https://www.freecodecamp.org/news/learn-react-by-building-a-weather-app/).
 
  ## Learn React
  
